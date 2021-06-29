@@ -1,0 +1,101 @@
+,id,symbol,name,price,market_cap,total_volume,rank,image
+0,bitcoin,btc,Bitcoin,2624725.0,49246699530851,2469586239684,1,https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579
+1,ethereum,eth,Ethereum,160731.0,18724550022499,2333211446084,2,https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880
+2,tether,usdt,Tether,74.66,4676373532290,4783176425541,3,https://assets.coingecko.com/coins/images/325/large/Tether-logo.png?1598003707
+3,binancecoin,bnb,Binance Coin,22287.0,3442201251451,122475348517,4,https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png?1547034615
+4,cardano,ada,Cardano,100.65,3228429535085,240265259086,5,https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860
+5,dogecoin,doge,Dogecoin,19.22,2505108941773,160366424957,6,https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256
+6,ripple,xrp,XRP,49.32,2274982411704,180443849716,7,https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731
+7,usd-coin,usdc,USD Coin,74.5,1889316047927,172589645144,8,https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389
+8,polkadot,dot,Polkadot,1214.39,1219997480388,62005583633,9,https://assets.coingecko.com/coins/images/12171/large/aJGBjJFU_400x400.jpg?1597804776
+9,binance-usd,busd,Binance USD,74.47,749725175852,289263515683,10,https://assets.coingecko.com/coins/images/9576/large/BUSD.png?1568947766
+10,bitcoin-cash,bch,Bitcoin Cash,38651.0,725548495638,288144154032,11,https://assets.coingecko.com/coins/images/780/large/bitcoin-cash-circle.png?1594689492
+11,uniswap,uni,Uniswap,1382.67,715141758075,24870098074,12,https://assets.coingecko.com/coins/images/12504/large/uniswap-uni.png?1600306604
+12,litecoin,ltc,Litecoin,10500.97,702075330331,215788094745,13,https://assets.coingecko.com/coins/images/2/large/litecoin.png?1547033580
+13,solana,sol,Solana,2509.35,685378340051,50381504096,14,https://assets.coingecko.com/coins/images/4128/large/coinmarketcap-solana-200.png?1616489452
+14,chainlink,link,Chainlink,1452.85,633062065220,68700736377,15,https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png?1547034700
+15,matic-network,matic,Polygon,85.19,537596444270,61225262672,16,https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png?1624446912
+16,theta-token,theta,Theta Network,530.53,531192143875,18773870729,17,https://assets.coingecko.com/coins/images/2538/large/theta-token-logo.png?1548387191
+17,wrapped-bitcoin,wbtc,Wrapped Bitcoin,2623794.0,509157456247,29681680944,18,https://assets.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png?1548822744
+18,internet-computer,icp,Internet Computer,3715.3,503417786238,58732276887,19,https://assets.coingecko.com/coins/images/14495/large/Internet_Computer_logo.png?1620703073
+19,stellar,xlm,Stellar,20.34,471008365601,34711536556,20,https://assets.coingecko.com/coins/images/100/large/Stellar_symbol_black_RGB.png?1552356157
+20,ethereum-classic,etc,Ethereum Classic,3467.96,443889790385,246637201619,21,https://assets.coingecko.com/coins/images/453/large/ethereum-classic-logo.png?1547034169
+21,vechain,vet,VeChain,6.19,402386090894,56201222995,22,https://assets.coingecko.com/coins/images/1167/large/VeChain-Logo-768x725.png?1547035194
+22,dai,dai,Dai,74.68,369947760872,42090834350,23,https://assets.coingecko.com/coins/images/9956/large/dai-multi-collateral-mcd.png?1574218774
+23,tron,trx,TRON,5.06,362368730145,93999744873,24,https://assets.coingecko.com/coins/images/1094/large/tron-logo.png?1547035066
+24,filecoin,fil,Filecoin,4248.74,353279524839,37075099698,25,https://assets.coingecko.com/coins/images/12817/large/filecoin.png?1602753933
+25,shiba-inu,shib,Shiba Inu,0.0006453,321014054059,41391948082,26,https://assets.coingecko.com/coins/images/11939/large/shiba.png?1622619446
+26,monero,xmr,Monero,16148.95,289707122000,13818891902,27,https://assets.coingecko.com/coins/images/69/large/monero_logo.png?1547033729
+27,eos,eos,EOS,296.52,284767818972,105574229323,28,https://assets.coingecko.com/coins/images/738/large/eos-eos-logo.png?1547034481
+28,compound-usd-coin,cusdc,cUSDC,1.64,261565229832,1861160539,29,https://assets.coingecko.com/coins/images/9442/large/Compound_USDC.png?1567581577
+29,cosmos,atom,Cosmos,846.96,232804325149,32235147453,30,https://assets.coingecko.com/coins/images/1481/large/cosmos_hub.png?1555657960
+30,aave,aave,Aave,18076.66,231901512043,27443333497,31,https://assets.coingecko.com/coins/images/12645/large/AAVE.png?1601374110
+31,bitcoin-cash-sv,bsv,Bitcoin SV,12097.89,226077151803,103608942044,32,https://assets.coingecko.com/coins/images/6799/large/BSV.png?1558947902
+32,okb,okb,OKB,823.13,220037379250,25819674490,33,https://assets.coingecko.com/coins/images/4463/large/okb_token.png?1548386209
+33,cdai,cdai,cDAI,1.6,212043952122,5373196343,34,https://assets.coingecko.com/coins/images/9281/large/cDAI.png?1576467585
+34,crypto-com-chain,cro,Crypto.com Coin,8.37,211928763315,4771555231,35,https://assets.coingecko.com/coins/images/7310/large/cypto.png?1547043960
+35,amp-token,amp,Amp,4.37,209427662859,2605916536,36,https://assets.coingecko.com/coins/images/12409/large/amp-200x200.png?1599625397
+36,algorand,algo,Algorand,66.84,206696409354,17766921483,37,https://assets.coingecko.com/coins/images/4380/large/download.png?1547039725
+37,klay-token,klay,Klaytn,78.17,195277190286,3364197835,38,https://assets.coingecko.com/coins/images/9672/large/CjbT82vP_400x400.jpg?1570548320
+38,celsius-degree-token,cel,Celsius Network,459.17,194587914146,1614949874,39,https://assets.coingecko.com/coins/images/3263/large/CEL_logo.png?1609598753
+39,pancakeswap-token,cake,PancakeSwap,1018.6,191388057130,13327713390,40,https://assets.coingecko.com/coins/images/12632/large/IMG_0440.PNG?1602654093
+40,compound-ether,ceth,cETH,3225.35,185633704321,412957849,41,https://assets.coingecko.com/coins/images/10643/large/ceth2.JPG?1581389598
+41,neo,neo,NEO,2599.29,183335371585,38424292196,42,https://assets.coingecko.com/coins/images/480/large/NEO_512_512.png?1594357361
+42,tezos,xtz,Tezos,209.66,175098651724,5229301205,43,https://assets.coingecko.com/coins/images/976/large/Tezos-logo.png?1547034862
+43,leo-token,leo,LEO Token,182.9,173819524394,121184522,44,https://assets.coingecko.com/coins/images/8418/large/leo-token.png?1558326215
+44,terra-luna,luna,Terra,417.66,173605727400,8160208493,45,https://assets.coingecko.com/coins/images/8284/large/luna1557227471663.png?1567147072
+45,iota,miota,IOTA,62.1,172510146567,2697239113,46,https://assets.coingecko.com/coins/images/692/large/IOTA_Swirl.png?1604238557
+46,ftx-token,ftt,FTX Token,1957.82,170352810040,2330661167,47,https://assets.coingecko.com/coins/images/9026/large/F.png?1609051564
+47,theta-fuel,tfuel,Theta Fuel,32.08,170163912527,5074607817,48,https://assets.coingecko.com/coins/images/8029/large/1_0YusgngOrriVg4ZYx4wOFQ.png?1553483622
+48,maker,mkr,Maker,173965.0,156609697704,8491839813,49,https://assets.coingecko.com/coins/images/1364/large/Mark_Maker.png?1585191826
+49,kusama,ksm,Kusama,16770.25,150421425230,37297573226,50,https://assets.coingecko.com/coins/images/9568/large/m4zRhP5e_400x400.jpg?1576190080
+50,safemoon,safemoon,SafeMoon,0.00025726,149072180332,1291341908,51,https://assets.coingecko.com/coins/images/14362/large/174x174-white.png?1617174846
+51,avalanche-2,AVAX,Avalanche,857.12,147465287509,4050203533,52,https://assets.coingecko.com/coins/images/12559/large/coin-round-red.png?1604021818
+52,terrausd,ust,TerraUSD,74.69,142755103205,5985490264,53,https://assets.coingecko.com/coins/images/12681/large/UST.png?1601612407
+53,bittorrent-2,btt,BitTorrent,0.207078,136323547783,30097661648,54,https://assets.coingecko.com/coins/images/7595/large/BTT_Token_Graphic.png?1555066995
+54,huobi-token,ht,Huobi Token,790.32,134778239099,11928325792,55,https://assets.coingecko.com/coins/images/2822/large/huobi-token-logo.png?1547036992
+55,thorchain,rune,THORChain,491.02,133917921219,9533723245,56,https://assets.coingecko.com/coins/images/6595/large/RUNE.png?1614160507
+56,decred,dcr,Decred,9998.69,130297305287,2356604828,57,https://assets.coingecko.com/coins/images/329/large/decred.png?1547034093
+57,compound-governance-token,comp,Compound,23819.0,127075917587,26228301734,58,https://assets.coingecko.com/coins/images/10775/large/COMP.png?1592625425
+58,the-graph,grt,The Graph,43.52,125930267529,7235671853,59,https://assets.coingecko.com/coins/images/13397/large/Graph_Token.png?1608145566
+59,hedera-hashgraph,hbar,Hedera Hashgraph,14.05,123443253040,4491826454,60,https://assets.coingecko.com/coins/images/3688/large/mqTDGK7Q.png?1566256777
+60,sushi,sushi,Sushi,587.13,111574600203,16747606431,61,https://assets.coingecko.com/coins/images/12271/large/512x512_Logo_no_chop.png?1606986688
+61,waves,waves,Waves,1087.48,108805249311,9921855084,62,https://assets.coingecko.com/coins/images/425/large/waves.png?1548386117
+62,elrond-erd-2,egld,Elrond,6032.46,108268528583,4456165470,63,https://assets.coingecko.com/coins/images/12335/large/Elrond.png?1599132180
+63,dash,dash,Dash,10362.96,104898679905,43579554778,64,https://assets.coingecko.com/coins/images/19/large/dash-logo.png?1548385930
+64,true-usd,tusd,TrueUSD,74.49,104745178227,4478768654,65,https://assets.coingecko.com/coins/images/3449/large/tusd.png?1618395665
+65,huobi-btc,hbtc,Huobi BTC,2623673.0,104231691612,864866767,66,https://assets.coingecko.com/coins/images/12407/large/Unknown-5.png?1599624896
+66,zcash,zec,Zcash,8902.56,100103360661,71290138135,67,https://assets.coingecko.com/coins/images/486/large/circle-zcash-color.png?1547034197
+67,chiliz,chz,Chiliz,18.68,99959881776,14788585291,68,https://assets.coingecko.com/coins/images/8834/large/Chiliz.png?1561970540
+68,telcoin,tel,Telcoin,1.79,97952416708,1106788477,69,https://assets.coingecko.com/coins/images/1899/large/tel.png?1547036203
+69,staked-ether,steth,Lido Staked Ether,160188.0,86654667357,471394341,70,https://assets.coingecko.com/coins/images/13442/large/steth_logo.png?1608607546
+70,yearn-finance,yfi,yearn.finance,2428076.0,86465117784,15215054724,71,https://assets.coingecko.com/coins/images/11849/large/yfi-192x192.png?1598325330
+71,havven,snx,Synthetix Network Token,541.8,85785219964,5105807064,72,https://assets.coingecko.com/coins/images/3406/large/SNX.png?1598631139
+72,nem,xem,NEM,9.5,85471150964,7208588809,73,https://assets.coingecko.com/coins/images/242/large/NEM_Logo_256x256.png?1598687029
+73,holotoken,hot,Holo,0.460361,81802462662,5763872029,74,https://assets.coingecko.com/coins/images/3348/large/Holologo_Profile.png?1547037966
+74,helium,hnt,Helium,921.73,81394640448,951426629,75,https://assets.coingecko.com/coins/images/4284/large/Helium_HNT.png?1612620071
+75,zilliqa,zil,Zilliqa,6.33,77167612542,17684081545,76,https://assets.coingecko.com/coins/images/2687/large/Zilliqa-logo.png?1547036894
+76,enjincoin,enj,Enjin Coin,79.74,74502093852,7047842828,77,https://assets.coingecko.com/coins/images/1102/large/enjin-coin-logo.png?1547035078
+77,quant-network,qnt,Quant,5721.79,73949113133,1910253988,78,https://assets.coingecko.com/coins/images/3370/large/5ZOu7brX_400x400.jpg?1612437252
+78,xdce-crowd-sale,xdc,XDC Network,5.65,69216678026,787542638,79,https://assets.coingecko.com/coins/images/2912/large/xdc-logo.png?1589242157
+79,basic-attention-token,bat,Basic Attention Token,43.37,64958123070,6335256567,80,https://assets.coingecko.com/coins/images/677/large/basic-attention-token.png?1547034427
+80,near,near,Near,152.5,62638419206,3162563136,81,https://assets.coingecko.com/coins/images/10365/large/near_icon.png?1601359077
+81,mdex,mdx,Mdex,121.53,61508358390,2821245074,82,https://assets.coingecko.com/coins/images/13775/large/mdex.png?1611739676
+82,paxos-standard,pax,Paxos Standard,74.41,61009577547,3103234562,83,https://assets.coingecko.com/coins/images/6013/large/paxos_standard.png?1548386291
+83,blockstack,stx,Stacks,55.55,58736763233,1615957926,84,https://assets.coingecko.com/coins/images/2069/large/Stacks_logo_full.png?1604112510
+84,bitcoin-gold,btg,Bitcoin Gold,3349.88,58336828617,3757339030,85,https://assets.coingecko.com/coins/images/1043/large/bitcoin-gold-logo.png?1547034978
+85,nexo,nexo,NEXO,104.22,58285453216,516398196,86,https://assets.coingecko.com/coins/images/3695/large/nexo.png?1548086057
+86,liquity-usd,lusd,Liquity USD,76.61,55892337424,625378175,87,https://assets.coingecko.com/coins/images/14666/large/Group_3.png?1617631327
+87,bancor,bnt,Bancor Network Token,243.05,54061187385,8010271096,88,https://assets.coingecko.com/coins/images/736/large/bancor.png?1547034477
+88,zencash,zen,Horizen,4767.63,53495537409,3400977494,89,https://assets.coingecko.com/coins/images/691/large/horizen.png?1555052241
+89,decentraland,mana,Decentraland,39.94,53036052122,2513984840,90,https://assets.coingecko.com/coins/images/878/large/decentraland-mana.png?1550108745
+90,qtum,qtum,Qtum,505.28,52222852535,16124161110,91,https://assets.coingecko.com/coins/images/684/large/qtum.png?1547034438
+91,harmony,one,Harmony,5.08,52056969180,1768472676,92,https://assets.coingecko.com/coins/images/4344/large/Y88JAze.png?1565065793
+92,nano,nano,Nano,370.51,49361180539,2552259599,93,https://assets.coingecko.com/coins/images/756/large/nano-coin-logo.png?1547034501
+93,digibyte,dgb,DigiByte,3.36,48598807682,1560566947,94,https://assets.coingecko.com/coins/images/63/large/digibyte.png?1547033717
+94,siacoin,sc,Siacoin,0.966188,46507484867,6184186683,95,https://assets.coingecko.com/coins/images/289/large/siacoin.png?1548386465
+95,0x,zrx,0x,53.53,45223747109,6877210091,96,https://assets.coingecko.com/coins/images/863/large/0x.png?1547034672
+96,compound-usdt,cusdt,cUSDT,1.58,45087842948,178494807,97,https://assets.coingecko.com/coins/images/11621/large/cUSDT.png?1592113270
+97,ontology,ont,Ontology,51.82,44707602465,10732319312,98,https://assets.coingecko.com/coins/images/3447/large/ONT.png?1583481820
+98,fantom,ftm,Fantom,17.47,44417769927,4158851677,99,https://assets.coingecko.com/coins/images/4001/large/Fantom.png?1558015016
+99,curve-dao-token,crv,Curve DAO Token,128.62,44393896936,9456667236,100,https://assets.coingecko.com/coins/images/12124/large/Curve.png?1597369484
