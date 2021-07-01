@@ -10,7 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Document(collection = "CryptoFiatList")
 public class CryptoAndFiatModel {
-    String field1;
     String id;
     String symbol;
     String name;

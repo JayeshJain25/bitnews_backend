@@ -11,4 +11,4 @@ for ind in df.index:
            'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
     list.append(dict)
 news_df=pd.DataFrame(list)
-news_df.to_csv("Prices.csv")
+news_df.to_csv("cryptoCurrencyPrices.csv", index=False)

@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApacheCommonsCsvUtil {
+public class CryptoCurrencyListCsvUtil {
 
     public static List<CryptoAndFiatModel> parseCsvFile(InputStream is) {
         BufferedReader fileReader = null;
@@ -29,8 +29,7 @@ public class ApacheCommonsCsvUtil {
 
             for (CSVRecord csvRecord : csvRecords) {
                 CryptoAndFiatModel customer = new CryptoAndFiatModel(
-                        csvRecord.get("field1"),
-                        csvRecord.get("id"),
+                       csvRecord.get("id"),
                         csvRecord.get("symbol"),
                         csvRecord.get("name"),
                         csvRecord.get("price"),

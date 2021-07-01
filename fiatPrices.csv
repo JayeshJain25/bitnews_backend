@@ -1,0 +1,31 @@
+symbol,price,name,id,image
+EUR,0.841467519353753,Euro,Euro,🇪🇺
+JPY,110.59407606866377,Japanese Yen,Japanese Yen,🇯🇵
+BGN,1.6457421743520702,Bulgarian Lev,Bulgarian Lev,🇧🇬
+CZK,21.447324133288458,Czech Koruna,Czech Koruna,🇨🇿
+DKK,6.257320767418379,Danish Krona,Danish Krona,🇩🇰
+GBP,0.7220212049814878,British Pound,British Pound,🇬🇧
+HUF,295.92729720632786,Hungarian Forint,Hungarian Forint,🇭🇺
+PLN,3.803517334230899,Polish Zloty,Polish Zloty,🇵🇱
+RON,4.146751935375295,Romanian Leu,Romanian Leu,🇷🇴
+SEK,8.508078088185798,Swedish Krona,Swedish Krona,🇸🇪
+CHF,0.9239313362504209,Swiss Franc,Swiss Franc,🇨🇭
+NOK,8.55915516661057,Norwegian Krona,Norwegian Krona,🇳🇴
+HRK,6.30368562773477,Croatian kuna,Croatian kuna,🇭🇷
+RUB,73.01624032312353,Russian Ruble,Russian Ruble,🇷🇺
+TRY,8.684786267250084,Turkish Lira,Turkish Lira,🇹🇷
+AUD,1.3339784584315046,Australian Dollar,Australian Dollar,🇦🇺
+BRL,4.968865701783912,Brazilian Real,Brazilian Real,🇧🇷
+CAD,1.238808481992595,Canadian Dollar,Canadian Dollar,🇨🇦
+CNY,6.457590037024572,Chinese Renminbi,Chinese Renminbi,🇨🇳
+HKD,7.7661561763715925,Hong Kong Dollar,Hong Kong Dollar,🇭🇰
+IDR,14540.811174688657,Indonesian Rupiah,Indonesian Rupiah,🇮🇩
+INR,74.32177717940088,Indian Rupee,Indian Rupee,🇮🇳
+KRW,1128.752945136318,South Korean won,South Korean won,🇰🇷
+MXN,19.84045775833053,Mexican Peso,Mexican Peso,🇲🇽
+MYR,4.151464153483676,Malaysian Ringgit,Malaysian Ringgit,🇲🇾
+NZD,1.4326825984516998,New-Zealand Dollar,New-Zealand Dollar,🇳🇿
+PHP,48.858128576236965,Philippines Peso,Philippines Peso,🇵🇭
+SGD,1.3443285089195558,Singapore Dollar,Singapore Dollar,🇸🇬
+THB,32.07505890272636,Thai Baht,Thai Baht,🇹🇭
+USD,1.0,US Dollar,US Dollar,🇺🇸
