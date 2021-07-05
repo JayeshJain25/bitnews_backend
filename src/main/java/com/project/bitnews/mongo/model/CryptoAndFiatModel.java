@@ -18,5 +18,4 @@ public class CryptoAndFiatModel {
     String total_volume;
     String rank;
     String image;
-
 }
