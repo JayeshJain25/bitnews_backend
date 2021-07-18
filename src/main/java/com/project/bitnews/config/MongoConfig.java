@@ -34,6 +34,7 @@ public class MongoConfig {
         final MongoClientSettings mongoClientSettings = MongoClientSettings.builder().applyConnectionString(connectionString).build();
         return MongoClients.create(mongoClientSettings);
     }
+
     @Bean
     public MongoTemplate mongoTemplate() {
         return new MongoTemplate(mongoDbFactory());

@@ -22,6 +22,7 @@ public class NewsController {
         this.newsService = newsService;
     }
 
+
     @GetMapping("/get-list")
     public ResponseEntity<?> getAllCryptoAndFiatList() {
 

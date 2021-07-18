@@ -35,21 +35,21 @@ public class CryptoCurrencyDataList {
     }
 
     @Scheduled(fixedRate = 60000)
-    public void cryptoCurrencyPricesUpdate() throws IOException {
+    private void cryptoCurrencyPricesUpdate() throws IOException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         Date now = new Date();
         String strDate = sdf.format(now);
-        System.out.println("Java cron job expression:: " + strDate);
+        System.out.println("Java cron job expression:: CryptoCurrencyPrice -> " + strDate);
 
         Runtime.getRuntime().exec("python3 " + cryptoPricePythonPath);
 
         List<CryptoAndFiatModel> cryptoAndFiatModelList = CryptoCurrencyListCsvUtil.parseCsvFile(new BufferedInputStream(new FileInputStream(cryptoPriceListPath)));
 
-        UpdateLivePriceData(cryptoAndFiatModelList);
+        updateLivePriceData(cryptoAndFiatModelList);
 
     }
 
-    private void UpdateLivePriceData(List<CryptoAndFiatModel> cryptoAndFiatModelList) {
+    private void updateLivePriceData(List<CryptoAndFiatModel> cryptoAndFiatModelList) {
         ArrayList<String> ids = new ArrayList<>();
         for (CryptoAndFiatModel cryptoAndFiatModel : cryptoAndFiatModelList) {
             ids.add(cryptoAndFiatModel.getId());
@@ -62,17 +62,17 @@ public class CryptoCurrencyDataList {
     }
 
     @Scheduled(fixedRate = 60000)
-    public void fiatCurrencyPriceUpdate() throws IOException {
+    private void fiatCurrencyPriceUpdate() throws IOException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         Date now = new Date();
         String strDate = sdf.format(now);
-        System.out.println("Java cron job expression:: " + strDate);
+        System.out.println("Java cron job expression:: FiatCurrencyPrice -> " + strDate);
 
         Runtime.getRuntime().exec("python3 " + fiatPricePythonPath);
 
         List<CryptoAndFiatModel> cryptoAndFiatModelList = FiatCurrencyListCsvUtil.parseCsvFile(new BufferedInputStream(new FileInputStream(fiatPriceListPath)));
 
-        UpdateLivePriceData(cryptoAndFiatModelList);
+        updateLivePriceData(cryptoAndFiatModelList);
 
     }
 }
