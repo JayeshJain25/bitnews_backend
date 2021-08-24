@@ -1,6 +1,7 @@
 package com.project.bitnews.service;
 
 import com.project.bitnews.mongo.model.CryptoAndFiatModel;
+import com.project.bitnews.mongo.model.NewsModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -19,5 +20,9 @@ public class NewsService {
 
     public List<CryptoAndFiatModel> getAllCryptoAndFiatList() {
         return mongoTemplate.findAll(CryptoAndFiatModel.class);
+    }
+
+    public List<NewsModel> getAllNewsList() {
+        return mongoTemplate.findAll(NewsModel.class);
     }
 }

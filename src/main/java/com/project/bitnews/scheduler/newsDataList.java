@@ -2,7 +2,11 @@ package com.project.bitnews.scheduler;
 
 import com.project.bitnews.mongo.model.NewsModel;
 import com.project.bitnews.utils.NewsListCsvUtil;
+import org.springframework.data.mongodb.core.FindAndModifyOptions;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -28,7 +32,7 @@ public class newsDataList {
         this.mongoTemplate = mongoTemplate;
     }
 
-    @Scheduled(fixedRate = 600000)
+    @Scheduled(fixedRate = 3600000)
     private void newsList1Update() throws IOException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         Date now = new Date();
@@ -44,8 +48,13 @@ public class newsDataList {
     }
 
     private void updateNewsList1(List<NewsModel> newsModelList) {
-        mongoTemplate.insertAll(newsModelList);
+
+        for (NewsModel model : newsModelList) {
+            Query query = new Query(Criteria.where("title").is(model.getTitle()));
+            NewsModel newsModel = mongoTemplate.findOne(query,NewsModel.class);
+            if(newsModel == null){
+                mongoTemplate.insert(model);
+            }
+        }
     }
-
-
 }
