@@ -50,6 +50,7 @@ public class newsDataList {
     private void updateNewsList1(List<NewsModel> newsModelList) {
 
         for (NewsModel model : newsModelList) {
+            System.out.println("TITLE OF NEWS -> "+model.getTitle());
             Query query = new Query(Criteria.where("title").is(model.getTitle()));
             NewsModel newsModel = mongoTemplate.findOne(query,NewsModel.class);
             if(newsModel == null){
