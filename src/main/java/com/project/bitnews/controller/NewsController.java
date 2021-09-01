@@ -1,6 +1,5 @@
 package com.project.bitnews.controller;
 
-import com.project.bitnews.mongo.model.CryptoAndFiatModel;
 import com.project.bitnews.mongo.model.NewsModel;
 import com.project.bitnews.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,17 +22,6 @@ public class NewsController {
         this.newsService = newsService;
     }
 
-
-    @GetMapping("/get-list")
-    public ResponseEntity<?> getAllCryptoAndFiatList() {
-
-        List<CryptoAndFiatModel> allCryptoAndFiatList = newsService.getAllCryptoAndFiatList();
-        if (allCryptoAndFiatList != null)
-            return ResponseEntity.status(HttpStatus.OK).body(allCryptoAndFiatList);
-        else
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
-
-    }
 
     @GetMapping("/get-news-list")
     public ResponseEntity<?> getAllNewsList() {

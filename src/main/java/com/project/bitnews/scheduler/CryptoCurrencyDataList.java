@@ -1,8 +1,8 @@
 package com.project.bitnews.scheduler;
 
 import com.project.bitnews.mongo.model.CryptoAndFiatModel;
-import com.project.bitnews.utils.CryptoCurrencyListCsvUtil;
-import com.project.bitnews.utils.FiatCurrencyListCsvUtil;
+import com.project.bitnews.utils.csv.CryptoCurrencyListCsv;
+import com.project.bitnews.utils.csv.FiatCurrencyListCsv;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -27,8 +27,7 @@ public class CryptoCurrencyDataList {
     String fiatPricePythonPath = basePath + "/python/fiatList.py";
     String fiatPriceListPath = basePath + "/fiatPrices.csv";
 
-    final
-    MongoTemplate mongoTemplate;
+    final MongoTemplate mongoTemplate;
 
     public CryptoCurrencyDataList(MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;
@@ -43,7 +42,7 @@ public class CryptoCurrencyDataList {
 
         Runtime.getRuntime().exec("python3 " + cryptoPricePythonPath);
 
-        List<CryptoAndFiatModel> cryptoAndFiatModelList = CryptoCurrencyListCsvUtil.parseCsvFile(new BufferedInputStream(new FileInputStream(cryptoPriceListPath)));
+        List<CryptoAndFiatModel> cryptoAndFiatModelList = CryptoCurrencyListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(cryptoPriceListPath)));
 
         updateLivePriceData(cryptoAndFiatModelList);
 
@@ -70,7 +69,7 @@ public class CryptoCurrencyDataList {
 
         Runtime.getRuntime().exec("python3 " + fiatPricePythonPath);
 
-        List<CryptoAndFiatModel> cryptoAndFiatModelList = FiatCurrencyListCsvUtil.parseCsvFile(new BufferedInputStream(new FileInputStream(fiatPriceListPath)));
+        List<CryptoAndFiatModel> cryptoAndFiatModelList = FiatCurrencyListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(fiatPriceListPath)));
 
         updateLivePriceData(cryptoAndFiatModelList);
 

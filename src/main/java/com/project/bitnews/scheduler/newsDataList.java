@@ -1,12 +1,10 @@
 package com.project.bitnews.scheduler;
 
 import com.project.bitnews.mongo.model.NewsModel;
-import com.project.bitnews.utils.NewsListCsvUtil;
-import org.springframework.data.mongodb.core.FindAndModifyOptions;
+import com.project.bitnews.utils.csv.NewsListCsv;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -42,7 +40,7 @@ public class newsDataList {
         Runtime.getRuntime().exec("python3 " + news1PythonPath);
 
         List<NewsModel> newsModelList =
-                NewsListCsvUtil.parseCsvFile(new BufferedInputStream(new FileInputStream(news1ListPath)));
+                NewsListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(news1ListPath)));
 
         updateNewsList1(newsModelList);
     }
@@ -50,7 +48,6 @@ public class newsDataList {
     private void updateNewsList1(List<NewsModel> newsModelList) {
 
         for (NewsModel model : newsModelList) {
-            System.out.println("TITLE OF NEWS -> "+model.getTitle());
             Query query = new Query(Criteria.where("title").is(model.getTitle()));
             NewsModel newsModel = mongoTemplate.findOne(query,NewsModel.class);
             if(newsModel == null){

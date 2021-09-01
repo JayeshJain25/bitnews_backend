@@ -1,4 +1,4 @@
-package com.project.bitnews.utils;
+package com.project.bitnews.utils.csv;
 
 import com.project.bitnews.mongo.model.CryptoAndFiatModel;
 import org.apache.commons.csv.CSVFormat;
@@ -12,13 +12,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FiatCurrencyListCsvUtil {
+public class CryptoCurrencyListCsv {
 
     public static List<CryptoAndFiatModel> parseCsvFile(InputStream is) {
         BufferedReader fileReader = null;
         CSVParser csvParser = null;
 
-        List<CryptoAndFiatModel> customers = new ArrayList<>();
+        List<CryptoAndFiatModel> cryptoAndFiatModelArrayList = new ArrayList<>();
 
         try {
             fileReader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -32,9 +32,12 @@ public class FiatCurrencyListCsvUtil {
                         csvRecord.get("id"),
                         csvRecord.get("symbol"),
                         csvRecord.get("name"),
-                        csvRecord.get("price"),
-                        "", "", "", csvRecord.get("image"));
-                customers.add(customer);
+                        Double.parseDouble(csvRecord.get("price")),
+                        Double.parseDouble(csvRecord.get("market_cap")),
+                        Double.parseDouble(csvRecord.get("total_volume")),
+                        Integer.parseInt(csvRecord.get("rank")),
+                        csvRecord.get("image"));
+                cryptoAndFiatModelArrayList.add(customer);
             }
 
         } catch (Exception e) {
@@ -52,7 +55,7 @@ public class FiatCurrencyListCsvUtil {
             }
         }
 
-        return customers;
+        return cryptoAndFiatModelArrayList;
     }
 
 }

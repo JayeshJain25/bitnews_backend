@@ -13,9 +13,9 @@ public class CryptoAndFiatModel {
     String id;
     String symbol;
     String name;
-    String price;
-    String market_cap;
-    String total_volume;
-    String rank;
+    double price;
+    double market_cap;
+    double total_volume;
+    int rank;
     String image;
 }

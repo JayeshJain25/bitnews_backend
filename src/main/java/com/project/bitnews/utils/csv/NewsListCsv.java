@@ -1,6 +1,6 @@
-package com.project.bitnews.utils;
+package com.project.bitnews.utils.csv;
 
-import com.project.bitnews.mongo.model.CryptoAndFiatModel;
+import com.project.bitnews.mongo.model.NewsModel;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -12,13 +12,14 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CryptoCurrencyListCsvUtil {
+public class NewsListCsv {
 
-    public static List<CryptoAndFiatModel> parseCsvFile(InputStream is) {
+
+    public static List<NewsModel> parseCsvFile(InputStream is) {
         BufferedReader fileReader = null;
         CSVParser csvParser = null;
 
-        List<CryptoAndFiatModel> cryptoAndFiatModelArrayList = new ArrayList<>();
+        List<NewsModel> newsModelList = new ArrayList<>();
 
         try {
             fileReader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -28,16 +29,15 @@ public class CryptoCurrencyListCsvUtil {
             Iterable<CSVRecord> csvRecords = csvParser.getRecords();
 
             for (CSVRecord csvRecord : csvRecords) {
-                CryptoAndFiatModel customer = new CryptoAndFiatModel(
-                        csvRecord.get("id"),
-                        csvRecord.get("symbol"),
-                        csvRecord.get("name"),
-                        csvRecord.get("price"),
-                        csvRecord.get("market_cap"),
-                        csvRecord.get("total_volume"),
-                        csvRecord.get("rank"),
-                        csvRecord.get("image"));
-                cryptoAndFiatModelArrayList.add(customer);
+                NewsModel newsModel = new NewsModel(
+                        csvRecord.get("title"),
+                        csvRecord.get("source"),
+                        csvRecord.get("description"),
+                        csvRecord.get("content"),
+                        csvRecord.get("pub_date"),
+                        csvRecord.get("url"),
+                        csvRecord.get("photo_url"));
+                newsModelList.add(newsModel);
             }
 
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class CryptoCurrencyListCsvUtil {
             }
         }
 
-        return cryptoAndFiatModelArrayList;
+        return newsModelList;
     }
 
 }

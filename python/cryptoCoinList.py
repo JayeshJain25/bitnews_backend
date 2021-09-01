@@ -1,7 +1,7 @@
 import pandas as pd
 from pycoingecko import CoinGeckoAPI
 cg = CoinGeckoAPI()
-coin_list = cg.get_coins_markets(vs_currency = 'inr')
+coin_list = cg.get_coins_markets(vs_currency = 'inr', per_page=250)
 df = pd.DataFrame(coin_list)
 var = df[['id', 'symbol', 'name', 'current_price', 'market_cap', 'total_volume', 'market_cap_rank', 'image']]
 list=[]
