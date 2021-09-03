@@ -34,7 +34,7 @@ public class CryptoCurrencyMarketDataList {
         this.mongoTemplate = mongoTemplate;
     }
 
-    @Scheduled(fixedRate = 300000)
+    @Scheduled(fixedRate = 120000)
     private void cryptoCoinsMarketData() throws IOException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         Date now = new Date();
@@ -66,8 +66,6 @@ public class CryptoCurrencyMarketDataList {
 
     private void updateLivePriceData(List<CryptoAndFiatModel> cryptoAndFiatModelList) {
 
-     //   mongoTemplate.insertAll(cryptoAndFiatModelList);
-
         BulkOperations bulkOps = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, CryptoAndFiatModel.class);
         for (CryptoAndFiatModel person : cryptoAndFiatModelList) {
             Query query = new Query().addCriteria(new Criteria("_id").is(person.getId()));
@@ -76,20 +74,9 @@ public class CryptoCurrencyMarketDataList {
             update.set("marketCap", person.getMarketCap());
             update.set("totalVolume", person.getTotalVolume());
             update.set("rank", person.getRank());
-          //  bulkOps.remove(query);
-           // bulkOps.insert(person);
-            bulkOps.updateOne(query,update);
+            bulkOps.upsert(query,update);
         }
         BulkWriteResult results = bulkOps.execute();
-
-//        for (CryptoAndFiatModel cryptoAndFiatModel : cryptoAndFiatModelList) {
-//
-//            Query q = new Query(Criteria.where("_id").is(cryptoAndFiatModel.getId()));
-//            CryptoAndFiatModel cryptoAndFiatModel1 = mongoTemplate.findOne(q, CryptoAndFiatModel.class);
-//            cryptoAndFiatModel1 = cryptoAndFiatModel;
-//            mongoTemplate.save(cryptoAndFiatModel1);
-//        }
-
     }
 
 }
