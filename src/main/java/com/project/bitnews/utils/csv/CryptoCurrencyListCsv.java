@@ -28,14 +28,40 @@ public class CryptoCurrencyListCsv {
             Iterable<CSVRecord> csvRecords = csvParser.getRecords();
 
             for (CSVRecord csvRecord : csvRecords) {
+
+                double price;
+                double marketCap;
+                double totalVolume;
+                double rank;
+
+                if(!csvRecord.get("price").isEmpty()){
+                    price = Double.parseDouble(csvRecord.get("price"));
+                }else{
+                    price = 0;
+                }
+                if(!csvRecord.get("market_cap").isEmpty()){
+                    marketCap = Double.parseDouble(csvRecord.get("market_cap"));
+                }else{
+                    marketCap = 0;
+                }if(!csvRecord.get("total_volume").isEmpty()){
+                    totalVolume = Double.parseDouble(csvRecord.get("total_volume"));
+                }else{
+                    totalVolume = 0;
+                }
+                if(!csvRecord.get("rank").isEmpty()){
+                    rank = Double.parseDouble(csvRecord.get("rank"));
+                }else{
+                    rank = 0;
+                }
+
                 CryptoAndFiatModel customer = new CryptoAndFiatModel(
                         csvRecord.get("id"),
                         csvRecord.get("symbol"),
                         csvRecord.get("name"),
-                        Double.parseDouble(csvRecord.get("price")),
-                        Double.parseDouble(csvRecord.get("market_cap")),
-                        Double.parseDouble(csvRecord.get("total_volume")),
-                        Integer.parseInt(csvRecord.get("rank")),
+                        price,
+                        marketCap,
+                        totalVolume,
+                        rank,
                         csvRecord.get("image"));
                 cryptoAndFiatModelArrayList.add(customer);
             }

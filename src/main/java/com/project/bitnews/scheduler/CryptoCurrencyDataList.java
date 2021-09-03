@@ -33,21 +33,6 @@ public class CryptoCurrencyDataList {
         this.mongoTemplate = mongoTemplate;
     }
 
-    @Scheduled(fixedRate = 60000)
-    private void cryptoCurrencyPricesUpdate() throws IOException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-        Date now = new Date();
-        String strDate = sdf.format(now);
-        System.out.println("Java cron job expression:: CryptoCurrencyPrice -> " + strDate);
-
-        Runtime.getRuntime().exec("python3 " + cryptoPricePythonPath);
-
-        List<CryptoAndFiatModel> cryptoAndFiatModelList = CryptoCurrencyListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(cryptoPriceListPath)));
-
-        updateLivePriceData(cryptoAndFiatModelList);
-
-    }
-
     private void updateLivePriceData(List<CryptoAndFiatModel> cryptoAndFiatModelList) {
         ArrayList<String> ids = new ArrayList<>();
         for (CryptoAndFiatModel cryptoAndFiatModel : cryptoAndFiatModelList) {

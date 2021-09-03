@@ -1,6 +1,7 @@
 package com.project.bitnews.mongo.model;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
@@ -10,13 +11,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Document(collection = "CryptoMarketData")
 public class CryptoCurrencyMarketDataModel {
+    @Id
     String id;
     String symbol;
     String name;
     double price;
-    long market_cap;
-    long total_volume;
-    int rank;
+    double market_cap;
+    double total_volume;
+    double rank;
     String image;
     double high24h;
     double low24h;

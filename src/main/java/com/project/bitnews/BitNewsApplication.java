@@ -6,8 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.web.client.RestTemplate;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 @EnableSwagger2
 @SpringBootApplication
@@ -24,5 +28,12 @@ public class BitNewsApplication {
         return new RestTemplate();
     }
 
+    @Bean()
+    public ThreadPoolTaskScheduler taskScheduler(){
+        ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();
+        taskScheduler.setPoolSize(3);
+        taskScheduler.initialize();
+        return taskScheduler;
+    }
 
 }
