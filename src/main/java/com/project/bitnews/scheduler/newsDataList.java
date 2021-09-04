@@ -21,7 +21,8 @@ public class newsDataList {
     String basePath = new File("").getAbsolutePath();
     String news1PythonPath = basePath + "/python/newsScrap1.py";
     String news1ListPath = basePath + "/news1.csv";
-
+    String news2PythonPath = basePath + "/python/newsScrap2.py";
+    String news2ListPath = basePath + "/news2.csv";
 
     final
     MongoTemplate mongoTemplate;
@@ -38,11 +39,15 @@ public class newsDataList {
         System.out.println("Java cron job expression:: NewsList1 -> " + strDate);
 
         Runtime.getRuntime().exec("python3 " + news1PythonPath);
+        Runtime.getRuntime().exec("python3 " + news2PythonPath);
 
         List<NewsModel> newsModelList =
                 NewsListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(news1ListPath)));
+        List<NewsModel> newsModelList2 =
+                NewsListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(news2ListPath)));
 
         updateNewsList1(newsModelList);
+        updateNewsList1(newsModelList2);
     }
 
     private void updateNewsList1(List<NewsModel> newsModelList) {

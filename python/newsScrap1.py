@@ -1,15 +1,12 @@
-import requests 
-from bs4 import BeautifulSoup
-import pprint
+import requests
 import pandas as pd
-import numpy as np
 from datetime import date
 import datetime
 
 today = date.today()
 
 Previous_Date = datetime.datetime.today() - datetime.timedelta(days=3)
-Previous_Date_Formatted = Previous_Date.strftime ("%Y-%m-%d")
+Previous_Date_Formatted = Previous_Date.strftime("%Y-%m-%d")
 
 d1 = today.strftime("%Y-%m-%d")
 
@@ -30,21 +27,15 @@ news = requests.get(url, params=news_parameters)
 news = news.json()
 
 news_articles = news["articles"]
-news_articles
 
 
 def get_articles(file):
     article_results = []
 
     for i in range(len(file)):
-        article_dict = {}
-        article_dict['title'] = file[i]['title']
-        article_dict['source'] = file[i]['source']
-        article_dict['description'] = file[i]['description']
-        article_dict['content'] = file[i]['content']
-        article_dict['pub_date'] = file[i]['publishedAt']
-        article_dict['url'] = file[i]["url"]
-        article_dict['photo_url'] = file[i]['urlToImage']
+        article_dict = {'title': file[i]['title'], 'source': file[i]['source'], 'description': file[i]['description'],
+                        'content': file[i]['content'], 'pub_date': file[i]['publishedAt'], 'url': file[i]["url"],
+                        'photo_url': file[i]['urlToImage']}
 
         article_results.append(article_dict)
     return article_results
@@ -54,7 +45,6 @@ news_df = pd.DataFrame(get_articles(news_articles))
 
 
 def source_getter(df):
-
     source = []
     for source_dict in df['source']:
         source.append(source_dict['name'])

@@ -16,8 +16,8 @@ public class CryptoCurrencyMarketDataModel {
     String symbol;
     String name;
     double price;
-    double market_cap;
-    double total_volume;
+    double marketCap;
+    double totalVolume;
     double rank;
     String image;
     double high24h;

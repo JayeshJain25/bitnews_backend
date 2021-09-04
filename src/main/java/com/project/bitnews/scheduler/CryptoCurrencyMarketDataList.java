@@ -4,6 +4,7 @@ import com.mongodb.bulk.BulkWriteResult;
 import com.project.bitnews.mongo.model.CryptoAndFiatModel;
 import com.project.bitnews.mongo.model.CryptoCurrencyMarketDataModel;
 import com.project.bitnews.utils.csv.CryptoCurrencyListCsv;
+import com.project.bitnews.utils.csv.CryptoCurrencyMarketDataListCsv;
 import org.springframework.data.mongodb.core.BulkOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -47,20 +48,41 @@ public class CryptoCurrencyMarketDataList {
 
         updateLivePriceData(cryptoAndFiatModelList);
 
-//        List<CryptoCurrencyMarketDataModel> cryptoCurrencyMarketDataModelList = CryptoCurrencyMarketDataListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(cryptoCurrencyMarketDataPath)));
-//        updateCryptoMarketData(cryptoCurrencyMarketDataModelList);
+        List<CryptoCurrencyMarketDataModel> cryptoCurrencyMarketDataModelList = CryptoCurrencyMarketDataListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(cryptoCurrencyMarketDataPath)));
+        updateCryptoMarketData(cryptoCurrencyMarketDataModelList);
 
     }
 
 
     private void updateCryptoMarketData(List<CryptoCurrencyMarketDataModel> cryptoCurrencyMarketDataModelList) {
 
-        for (CryptoCurrencyMarketDataModel cryptoCurrencyMarketDataModel : cryptoCurrencyMarketDataModelList) {
-            Query q = new Query(Criteria.where("_id").is(cryptoCurrencyMarketDataModel.getId()));
-            CryptoCurrencyMarketDataModel cryptoAndFiatModel1 = mongoTemplate.findOne(q, CryptoCurrencyMarketDataModel.class);
-            cryptoAndFiatModel1 = cryptoCurrencyMarketDataModel;
-            mongoTemplate.save(cryptoAndFiatModel1);
+
+        BulkOperations bulkOps = mongoTemplate.bulkOps(BulkOperations.BulkMode.UNORDERED, CryptoCurrencyMarketDataModel.class);
+        for(CryptoCurrencyMarketDataModel marketDataModel : cryptoCurrencyMarketDataModelList){
+            Query query = new Query().addCriteria(new Criteria("_id").is(marketDataModel.getId()));
+            Update update = new Update();
+
+            update.set("price", marketDataModel.getPrice());
+            update.set("marketCap", marketDataModel.getMarketCap());
+            update.set("totalVolume", marketDataModel.getTotalVolume());
+            update.set("rank", marketDataModel.getRank());
+            update.set("high24h",marketDataModel.getHigh24h());
+            update.set("low24h",marketDataModel.getLow24h());
+            update.set("priceChange24h",marketDataModel.getPriceChange24h());
+            update.set("priceChangePercentage24h",marketDataModel.getPriceChangePercentage24h());
+            update.set("marketCapChange24h",marketDataModel.getMarketCapChange24h());
+            update.set("marketCapChangePercentage24h",marketDataModel.getMarketCapChangePercentage24h());
+            update.set("circulatingSupply",marketDataModel.getCirculatingSupply());
+            update.set("totalSupply",marketDataModel.getTotalSupply());
+            update.set("maxSupply",marketDataModel.getMaxSupply());
+            update.set("atl",marketDataModel.getAtl());
+            update.set("atlChangePercentage",marketDataModel.getAtlChangePercentage());
+            update.set("atlDate",marketDataModel.getAtlDate());
+            update.set("lastUpdated",marketDataModel.getLastUpdated());
+            bulkOps.upsert(query,update);
         }
+        BulkWriteResult results = bulkOps.execute();
+
     }
 
 
