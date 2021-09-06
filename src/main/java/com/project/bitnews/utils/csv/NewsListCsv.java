@@ -29,9 +29,15 @@ public class NewsListCsv {
             Iterable<CSVRecord> csvRecords = csvParser.getRecords();
 
             for (CSVRecord csvRecord : csvRecords) {
+                String source;
+                if(csvRecord.get("source") != null){
+                    source = csvRecord.get("source");
+                }else{
+                    source = "none";
+                }
                 NewsModel newsModel = new NewsModel(
                         csvRecord.get("title"),
-                        csvRecord.get("source"),
+                        source,
                         csvRecord.get("description"),
                         csvRecord.get("content"),
                         csvRecord.get("pub_date"),

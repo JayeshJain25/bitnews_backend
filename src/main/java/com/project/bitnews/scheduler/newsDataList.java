@@ -23,6 +23,8 @@ public class newsDataList {
     String news1ListPath = basePath + "/news1.csv";
     String news2PythonPath = basePath + "/python/newsScrap2.py";
     String news2ListPath = basePath + "/news2.csv";
+    String news3PythonPath = basePath + "/python/newsScrap3.py";
+    String news3ListPath = basePath + "/news3.csv";
 
     final
     MongoTemplate mongoTemplate;
@@ -40,14 +42,18 @@ public class newsDataList {
 
         Runtime.getRuntime().exec("python3 " + news1PythonPath);
         Runtime.getRuntime().exec("python3 " + news2PythonPath);
+        Runtime.getRuntime().exec("python3 " + news3PythonPath);
 
         List<NewsModel> newsModelList =
                 NewsListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(news1ListPath)));
         List<NewsModel> newsModelList2 =
                 NewsListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(news2ListPath)));
+        List<NewsModel> newsModelList3 =
+                NewsListCsv.parseCsvFile(new BufferedInputStream(new FileInputStream(news3ListPath)));
 
         updateNewsList1(newsModelList);
         updateNewsList1(newsModelList2);
+        updateNewsList1(newsModelList3);
     }
 
     private void updateNewsList1(List<NewsModel> newsModelList) {

@@ -2,7 +2,7 @@ from gnews import GNews
 import pandas as pd
 from datetime import datetime
 
-google_news = GNews(language='en', period='1d', max_results=100)
+google_news = GNews(language='en', period='1h', max_results=100)
 json_resp = google_news.get_news('cryptocurrency')
 df = pd.DataFrame(json_resp)
 list1 = []
