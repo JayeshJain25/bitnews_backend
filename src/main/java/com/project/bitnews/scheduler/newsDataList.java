@@ -26,8 +26,7 @@ public class newsDataList {
     String news3PythonPath = basePath + "/python/newsScrap3.py";
     String news3ListPath = basePath + "/news3.csv";
 
-    final
-    MongoTemplate mongoTemplate;
+    final MongoTemplate mongoTemplate;
 
     public newsDataList(MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;

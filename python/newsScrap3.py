@@ -60,11 +60,10 @@ result = googlenews.result()
 df = pd.DataFrame(result)
 
 # traversing through pages of google news
-for i in range(1, 10):
+for i in range(1, 35):
     googlenews.getpage(i)
     result = googlenews.result()
     df = pd.DataFrame(result)
-    time.sleep(1)
 
 list = []
 for ind in df.index:
@@ -80,7 +79,7 @@ for ind in df.index:
         dict['url'] = article.url
         dict['description'] = article.text
         dict['photo_url'] = article.top_image,
-        dict['content']: "none"
+        dict['content'] =  "none"
         list.append(dict)
     except:
         pass

@@ -2,6 +2,7 @@ package com.project.bitnews.controller;
 
 
 import com.project.bitnews.mongo.model.CryptoAndFiatModel;
+import com.project.bitnews.mongo.model.CryptoCurrencyMarketDataModel;
 import com.project.bitnews.service.CryptoCurrencyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,17 @@ public class CryptoCurrencyController {
         List<CryptoAndFiatModel> allCryptoAndFiatList = cryptoCurrencyService.getAllCryptoAndFiatList(page,size);
         if (allCryptoAndFiatList != null)
             return ResponseEntity.status(HttpStatus.OK).body(allCryptoAndFiatList);
+        else
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+
+    }
+
+    @GetMapping("/get-crypto-market-data-list")
+    public ResponseEntity<?> getAllCryptoMarketDataList(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+
+        List<CryptoCurrencyMarketDataModel> cryptoCurrencyMarketData = cryptoCurrencyService.getCryptoCurrencyMarketData(page,size);
+        if (cryptoCurrencyMarketData != null)
+            return ResponseEntity.status(HttpStatus.OK).body(cryptoCurrencyMarketData);
         else
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
 

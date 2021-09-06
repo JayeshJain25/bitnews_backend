@@ -62,6 +62,9 @@ public class CryptoCurrencyMarketDataList {
             Query query = new Query().addCriteria(new Criteria("_id").is(marketDataModel.getId()));
             Update update = new Update();
 
+            update.set("symbol",marketDataModel.getSymbol());
+            update.set("name",marketDataModel.getName());
+            update.set("image",marketDataModel.getImage());
             update.set("price", marketDataModel.getPrice());
             update.set("marketCap", marketDataModel.getMarketCap());
             update.set("totalVolume", marketDataModel.getTotalVolume());

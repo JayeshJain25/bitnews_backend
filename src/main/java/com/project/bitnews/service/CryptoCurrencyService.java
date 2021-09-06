@@ -2,7 +2,9 @@ package com.project.bitnews.service;
 
 
 import com.project.bitnews.mongo.model.CryptoAndFiatModel;
+import com.project.bitnews.mongo.model.CryptoCurrencyMarketDataModel;
 import com.project.bitnews.mongo.repository.CryptoAndFiatRepository;
+import com.project.bitnews.mongo.repository.CryptoMarketDataRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,10 +28,21 @@ public class CryptoCurrencyService {
     @Autowired
     CryptoAndFiatRepository cryptoAndFiatRepository;
 
+    @Autowired
+    CryptoMarketDataRepository cryptoMarketDataRepository;
+
     public List<CryptoAndFiatModel> getAllCryptoAndFiatList(int page, int size) {
         Page<CryptoAndFiatModel> cryptoAndFiatModelPage;
         Pageable paging = PageRequest.of(page, size);
         cryptoAndFiatModelPage = cryptoAndFiatRepository.findAll(paging);
         return cryptoAndFiatModelPage.getContent();
     }
+
+    public List<CryptoCurrencyMarketDataModel> getCryptoCurrencyMarketData(int page, int size) {
+        Page<CryptoCurrencyMarketDataModel> cryptoCurrencyMarketDataModelPage;
+        Pageable paging = PageRequest.of(page, size);
+        cryptoCurrencyMarketDataModelPage = cryptoMarketDataRepository.findAll(paging);
+        return cryptoCurrencyMarketDataModelPage.getContent();
+    }
+
 }
