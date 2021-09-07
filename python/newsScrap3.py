@@ -49,7 +49,7 @@ config = Config()
 config.browser_user_agent = user_agent
 
 # googlenews = GoogleNews(start='09/09/2021', end='09/09/2021')
-googlenews = GoogleNews(period='1h')
+googlenews = GoogleNews(period='1m')
 
 # query for google news
 googlenews.search('cryptocurrency news')

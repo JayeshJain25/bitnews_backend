@@ -28,18 +28,28 @@ public class CryptoCurrencyController {
     @GetMapping("/get-crypto-fiat-list")
     public ResponseEntity<?> getAllCryptoAndFiatList(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
 
-        List<CryptoAndFiatModel> allCryptoAndFiatList = cryptoCurrencyService.getAllCryptoAndFiatList(page,size);
+        List<CryptoAndFiatModel> allCryptoAndFiatList = cryptoCurrencyService.getAllCryptoAndFiatList(page, size);
         if (allCryptoAndFiatList != null)
             return ResponseEntity.status(HttpStatus.OK).body(allCryptoAndFiatList);
         else
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
-
     }
+
+    @GetMapping("/get-crypto-fiat-list-by-search")
+    public ResponseEntity<?> getCryptoAndFiatListBySearch(@RequestParam String name) {
+
+        List<CryptoAndFiatModel> allCryptoAndFiatList = cryptoCurrencyService.getCryptoAndFiatListBySearch(name);
+        if (allCryptoAndFiatList != null)
+            return ResponseEntity.status(HttpStatus.OK).body(allCryptoAndFiatList);
+        else
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+    }
+
 
     @GetMapping("/get-crypto-market-data-list")
     public ResponseEntity<?> getAllCryptoMarketDataList(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
 
-        List<CryptoCurrencyMarketDataModel> cryptoCurrencyMarketData = cryptoCurrencyService.getCryptoCurrencyMarketData(page,size);
+        List<CryptoCurrencyMarketDataModel> cryptoCurrencyMarketData = cryptoCurrencyService.getCryptoCurrencyMarketData(page, size);
         if (cryptoCurrencyMarketData != null)
             return ResponseEntity.status(HttpStatus.OK).body(cryptoCurrencyMarketData);
         else

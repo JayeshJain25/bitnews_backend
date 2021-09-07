@@ -45,4 +45,8 @@ public class CryptoCurrencyService {
         return cryptoCurrencyMarketDataModelPage.getContent();
     }
 
+    public List<CryptoAndFiatModel> getCryptoAndFiatListBySearch(String name) {
+        return cryptoAndFiatRepository.findByNameStartingWith(name);
+    }
+
 }
