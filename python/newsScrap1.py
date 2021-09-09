@@ -5,7 +5,7 @@ import datetime
 
 today = date.today()
 
-Previous_Date = datetime.datetime.today() - datetime.timedelta(days=3)
+Previous_Date = datetime.datetime.today() - datetime.timedelta(days=2)
 Previous_Date_Formatted = Previous_Date.strftime("%Y-%m-%d")
 
 d1 = today.strftime("%Y-%m-%d")
