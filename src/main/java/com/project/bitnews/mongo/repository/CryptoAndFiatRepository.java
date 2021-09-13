@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.repository.Query;
 import java.util.List;
 
 public interface CryptoAndFiatRepository extends MongoRepository<CryptoAndFiatModel,String> {
-    Page<CryptoAndFiatModel> findAll(Pageable pageable);
-    Page<CryptoAndFiatModel> findByRank(double rank,Pageable pageable);
+    @Query("{rank : {$gte : ?0} }")
+    Page<CryptoAndFiatModel> findAll(double rank,Pageable pageable);
     @Query("{ 'name' : { $regex: ?0, $options : 'i' } }")
     List<CryptoAndFiatModel> findByNameStartingWith(String name);
 }

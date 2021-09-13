@@ -35,9 +35,9 @@ for countryName1 in default_country:
 df['name'] = countryName
 df['id'] = countryName
 df['image'] = flagList
+df['type'] = "Fiat"
 
-df.loc[len(df.index)] = ['USD', 1, "US Dollar", "US Dollar", "🇺🇸"]
-
+df.loc[len(df.index)] = ['USD', 1, "US Dollar", "US Dollar", "🇺🇸","Fiat"]
 
 df.to_csv('fiatPrices.csv', index=False)
 

@@ -34,7 +34,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 
@@ -68,7 +68,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 
@@ -101,7 +101,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 
@@ -134,7 +134,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 
@@ -167,7 +167,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df5 = pd.DataFrame(list)
@@ -199,7 +199,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 
@@ -231,7 +231,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df7 = pd.DataFrame(list)
@@ -262,7 +262,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df8 = pd.DataFrame(list)
@@ -292,7 +292,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df9 = pd.DataFrame(list)
@@ -322,7 +322,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df10 = pd.DataFrame(list)
@@ -352,7 +352,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df11 = pd.DataFrame(list)
@@ -382,7 +382,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df12 = pd.DataFrame(list)
@@ -412,7 +412,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df13 = pd.DataFrame(list)
@@ -442,7 +442,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df14 = pd.DataFrame(list)
@@ -472,7 +472,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df15 = pd.DataFrame(list)
@@ -502,7 +502,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df16 = pd.DataFrame(list)
@@ -532,7 +532,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df17 = pd.DataFrame(list)
@@ -562,7 +562,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df18 = pd.DataFrame(list)
@@ -592,7 +592,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df19 = pd.DataFrame(list)
@@ -622,7 +622,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df20 = pd.DataFrame(list)
@@ -652,7 +652,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df21 = pd.DataFrame(list)
@@ -682,7 +682,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df22 = pd.DataFrame(list)
@@ -712,7 +712,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df23 = pd.DataFrame(list)
@@ -742,7 +742,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df24 = pd.DataFrame(list)
@@ -772,7 +772,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df25 = pd.DataFrame(list)
@@ -802,7 +802,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df26 = pd.DataFrame(list)
@@ -832,7 +832,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df27 = pd.DataFrame(list)
@@ -862,7 +862,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df28 = pd.DataFrame(list)
@@ -892,7 +892,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df29 = pd.DataFrame(list)
@@ -922,7 +922,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df30 = pd.DataFrame(list)
@@ -952,7 +952,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df31 = pd.DataFrame(list)
@@ -983,7 +983,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df32 = pd.DataFrame(list)
@@ -1014,7 +1014,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df33 = pd.DataFrame(list)
@@ -1044,7 +1044,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df34 = pd.DataFrame(list)
@@ -1074,7 +1074,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df35 = pd.DataFrame(list)
@@ -1104,7 +1104,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df36 = pd.DataFrame(list)
@@ -1134,7 +1134,7 @@ for ind in df.index:
     dict1 = {'id': df['id'][ind], 'symbol': df['symbol'][ind], 'name': df['name'][ind],
              'price': df['current_price'][ind],
              'market_cap': df['market_cap'][ind], 'total_volume': df['total_volume'][ind],
-             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind]}
+             'rank': df['market_cap_rank'][ind], 'image': df['image'][ind] , 'type': "Crypto"}
 
     list1.append(dict1)
 df37 = pd.DataFrame(list)

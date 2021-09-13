@@ -1,31 +1,31 @@
-symbol,price,name,id,image
-EUR,0.8431703204047218,Euro,Euro,🇪🇺
-JPY,110.04215851602024,Japanese Yen,Japanese Yen,🇯🇵
-BGN,1.649072512647555,Bulgarian Lev,Bulgarian Lev,🇧🇬
-CZK,21.43591905564924,Czech Koruna,Czech Koruna,🇨🇿
-DKK,6.269983136593592,Danish Krona,Danish Krona,🇩🇰
-GBP,0.7260961214165261,British Pound,British Pound,🇬🇧
-HUF,293.92074198988195,Hungarian Forint,Hungarian Forint,🇭🇺
-PLN,3.809443507588533,Polish Zloty,Polish Zloty,🇵🇱
-RON,4.174198988195616,Romanian Leu,Romanian Leu,🇷🇴
-SEK,8.559443507588533,Swedish Krona,Swedish Krona,🇸🇪
-CHF,0.9150927487352445,Swiss Franc,Swiss Franc,🇨🇭
-NOK,8.683811129848229,Norwegian Krona,Norwegian Krona,🇳🇴
-HRK,6.3060708263069145,Croatian kuna,Croatian kuna,🇭🇷
-RUB,73.28836424957842,Russian Ruble,Russian Ruble,🇷🇺
-TRY,8.325042158516021,Turkish Lira,Turkish Lira,🇹🇷
-AUD,1.3527824620573357,Australian Dollar,Australian Dollar,🇦🇺
-BRL,5.170573355817876,Brazilian Real,Brazilian Real,🇧🇷
-CAD,1.2593591905564925,Canadian Dollar,Canadian Dollar,🇨🇦
-CNY,6.464586846543002,Chinese Renminbi,Chinese Renminbi,🇨🇳
-HKD,7.773777403035413,Hong Kong Dollar,Hong Kong Dollar,🇭🇰
-IDR,14259.662731871838,Indonesian Rupiah,Indonesian Rupiah,🇮🇩
-INR,73.47006745362563,Indian Rupee,Indian Rupee,🇮🇳
-KRW,1163.7015177065769,South Korean won,South Korean won,🇰🇷
-MXN,19.954384485666107,Mexican Peso,Mexican Peso,🇲🇽
-MYR,4.155480607082631,Malaysian Ringgit,Malaysian Ringgit,🇲🇾
-NZD,1.40531197301855,New-Zealand Dollar,New-Zealand Dollar,🇳🇿
-PHP,50.22428330522766,Philippines Peso,Philippines Peso,🇵🇭
-SGD,1.345362563237774,Singapore Dollar,Singapore Dollar,🇸🇬
-THB,32.58010118043845,Thai Baht,Thai Baht,🇹🇭
-USD,1.0,US Dollar,US Dollar,🇺🇸
+symbol,price,name,id,image,type
+EUR,0.8445232666159953,Euro,Euro,🇪🇺,Fiat
+JPY,109.81336035807787,Japanese Yen,Japanese Yen,🇯🇵,Fiat
+BGN,1.6517186048475636,Bulgarian Lev,Bulgarian Lev,🇧🇬,Fiat
+CZK,21.35630436618529,Czech Koruna,Czech Koruna,🇨🇿,Fiat
+DKK,6.280043915209864,Danish Krona,Danish Krona,🇩🇰,Fiat
+GBP,0.7200405371167976,British Pound,British Pound,🇬🇧,Fiat
+HUF,295.4818005236044,Hungarian Forint,Hungarian Forint,🇭🇺,Fiat
+PLN,3.8355713199898656,Polish Zloty,Polish Zloty,🇵🇱,Fiat
+RON,4.173042817329618,Romanian Leu,Romanian Leu,🇷🇴,Fiat
+SEK,8.600878304197282,Swedish Krona,Swedish Krona,🇸🇪,Fiat
+CHF,0.9166455535850012,Swiss Franc,Swiss Franc,🇨🇭,Fiat
+NOK,8.616501984629677,Norwegian Krona,Norwegian Krona,🇳🇴,Fiat
+HRK,6.322185626214003,Croatian kuna,Croatian kuna,🇭🇷,Fiat
+RUB,72.72063170340344,Russian Ruble,Russian Ruble,🇷🇺,Fiat
+TRY,8.407904737775526,Turkish Lira,Turkish Lira,🇹🇷,Fiat
+AUD,1.35005489401233,Australian Dollar,Australian Dollar,🇦🇺,Fiat
+BRL,5.188413140782029,Brazilian Real,Brazilian Real,🇧🇷,Fiat
+CAD,1.2599442614644034,Canadian Dollar,Canadian Dollar,🇨🇦,Fiat
+CNY,6.437631956760409,Chinese Renminbi,Chinese Renminbi,🇨🇳,Fiat
+HKD,7.7768769529600545,Hong Kong Dollar,Hong Kong Dollar,🇭🇰,Fiat
+IDR,14198.589646144752,Indonesian Rupiah,Indonesian Rupiah,🇮🇩,Fiat
+INR,73.42868001013429,Indian Rupee,Indian Rupee,🇮🇳,Fiat
+KRW,1165.9065957267123,South Korean won,South Korean won,🇰🇷,Fiat
+MXN,19.88041550544718,Mexican Peso,Mexican Peso,🇲🇽,Fiat
+MYR,4.137995101765054,Malaysian Ringgit,Malaysian Ringgit,🇲🇾,Fiat
+NZD,1.3980238155561187,New-Zealand Dollar,New-Zealand Dollar,🇳🇿,Fiat
+PHP,49.864876277341445,Philippines Peso,Philippines Peso,🇵🇭,Fiat
+SGD,1.3383160206063678,Singapore Dollar,Singapore Dollar,🇸🇬,Fiat
+THB,32.6450468710413,Thai Baht,Thai Baht,🇹🇭,Fiat
+USD,1.0,US Dollar,US Dollar,🇺🇸,Fiat

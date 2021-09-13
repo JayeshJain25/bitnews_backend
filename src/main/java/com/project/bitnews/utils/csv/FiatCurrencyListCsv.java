@@ -33,7 +33,7 @@ public class FiatCurrencyListCsv {
                         csvRecord.get("symbol"),
                         csvRecord.get("name"),
                         Double.parseDouble(csvRecord.get("price")),
-                        0, 0, 0, csvRecord.get("image"));
+                        0, 0, 0, csvRecord.get("image"),csvRecord.get("type"));
                 customers.add(customer);
             }
 

@@ -1,7 +1,6 @@
 package com.project.bitnews.scheduler;
 
 import com.project.bitnews.mongo.model.CryptoAndFiatModel;
-import com.project.bitnews.utils.csv.CryptoCurrencyListCsv;
 import com.project.bitnews.utils.csv.FiatCurrencyListCsv;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -22,8 +21,6 @@ import java.util.List;
 public class CryptoCurrencyDataList {
 
     String basePath = new File("").getAbsolutePath();
-    String cryptoPricePythonPath = basePath + "/python/cryptoCoinList.py";
-    String cryptoPriceListPath = basePath + "/cryptoCurrencyPrices.csv";
     String fiatPricePythonPath = basePath + "/python/fiatList.py";
     String fiatPriceListPath = basePath + "/fiatPrices.csv";
 

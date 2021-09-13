@@ -20,4 +20,5 @@ public class CryptoAndFiatModel {
     double totalVolume;
     double rank;
     String image;
+    String type;
 }

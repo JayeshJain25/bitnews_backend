@@ -99,6 +99,7 @@ public class CryptoCurrencyMarketDataList {
             update.set("marketCap", person.getMarketCap());
             update.set("totalVolume", person.getTotalVolume());
             update.set("rank", person.getRank());
+            update.set("type",person.getType());
             bulkOps.upsert(query,update);
         }
         BulkWriteResult results = bulkOps.execute();

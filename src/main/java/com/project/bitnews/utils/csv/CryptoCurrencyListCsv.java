@@ -62,7 +62,7 @@ public class CryptoCurrencyListCsv {
                         marketCap,
                         totalVolume,
                         rank,
-                        csvRecord.get("image"));
+                        csvRecord.get("image"),csvRecord.get("type"));
                 cryptoAndFiatModelArrayList.add(customer);
             }
 
