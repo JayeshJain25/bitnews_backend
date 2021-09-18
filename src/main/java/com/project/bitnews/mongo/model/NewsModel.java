@@ -14,8 +14,9 @@ public class NewsModel {
     String title;
     String source;
     String description;
-    String content;
     String publishedDate;
     String url;
     String photoUrl;
+    String summary;
+    String readTime;
 }

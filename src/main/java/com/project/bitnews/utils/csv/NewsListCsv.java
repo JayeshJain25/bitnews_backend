@@ -39,10 +39,11 @@ public class NewsListCsv {
                         csvRecord.get("title"),
                         source,
                         csvRecord.get("description"),
-                        csvRecord.get("content"),
                         csvRecord.get("pub_date"),
                         csvRecord.get("url"),
-                        csvRecord.get("photo_url"));
+                        csvRecord.get("photo_url"),
+                        csvRecord.get("summary"),
+                        csvRecord.get("read_time"));
                 newsModelList.add(newsModel);
             }
 

@@ -1,11 +1,12 @@
-import time
 import datetime
-from dateutil.relativedelta import relativedelta
+
+import nltk
+import pandas as pd
+import readtime
 from GoogleNews import GoogleNews
+from dateutil.relativedelta import relativedelta
 from newspaper import Article
 from newspaper import Config
-import pandas as pd
-import nltk
 
 
 def get_past_date(str_days_ago):
@@ -60,7 +61,7 @@ result = googlenews.result()
 df = pd.DataFrame(result)
 
 # traversing through pages of google news
-for i in range(1, 35):
+for i in range(1, 15):
     googlenews.getpage(i)
     result = googlenews.result()
     df = pd.DataFrame(result)
@@ -79,11 +80,11 @@ for ind in df.index:
         dict['url'] = article.url
         dict['description'] = article.text
         dict['photo_url'] = article.top_image,
-        dict['content'] =  "none"
+        dict['read_time'] = readtime.of_text(article.text)
+        dict['summary'] = article.summary
         list.append(dict)
     except:
         pass
-print(len(list))
 
 news_df = pd.DataFrame(list)
 news_df

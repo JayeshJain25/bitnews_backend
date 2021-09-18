@@ -59,8 +59,8 @@ public class newsDataList {
 
         for (NewsModel model : newsModelList) {
             Query query = new Query(Criteria.where("title").is(model.getTitle()));
-            NewsModel newsModel = mongoTemplate.findOne(query,NewsModel.class);
-            if(newsModel == null){
+            NewsModel newsModel = mongoTemplate.findOne(query, NewsModel.class);
+            if (newsModel == null) {
                 mongoTemplate.insert(model);
             }
         }
