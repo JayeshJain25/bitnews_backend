@@ -1,11 +1,13 @@
 import requests
 import pandas as pd
 from datetime import date
-import datetime
 import readtime
 from newspaper import Article
 from newspaper import Config
+from datetime import datetime
 
+now = datetime.now()
+time = now.strftime("%H:%M:%S")
 
 user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.58 Safari/537.36'
 config = Config()
@@ -80,6 +82,6 @@ def get_article_estimate_time(df):
 get_article_estimate_time(news_df)
 source_getter(news_df)
 news_df['pub_date'] = pd.to_datetime(
-    news_df['pub_date']).apply(lambda x: x.date())
+    news_df['pub_date']).apply(lambda x: x.date().strftime("%Y-%m-%d") + " " + time)
 
 news_df.to_csv('news1.csv', index=False)

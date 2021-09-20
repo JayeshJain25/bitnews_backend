@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 import nltk
 import pandas as pd
@@ -8,9 +8,12 @@ from dateutil.relativedelta import relativedelta
 from newspaper import Article
 from newspaper import Config
 
+now = datetime.now()
+time = now.strftime("%H:%M:%S")
+
 
 def get_past_date(str_days_ago):
-    TODAY = datetime.date.today()
+    TODAY = datetime.today()
     splitted = str_days_ago.split()
     if len(splitted) == 1 and splitted[0].lower() == 'today':
         return str(TODAY.isoformat())
@@ -18,13 +21,13 @@ def get_past_date(str_days_ago):
         date = TODAY - relativedelta(days=1)
         return str(date.isoformat())
     elif splitted[1].lower() in ['sec', 'seconds', 'second', "secs"]:
-        date = datetime.datetime.now() - relativedelta(seconds=int(splitted[0]))
+        date = datetime.now() - relativedelta(seconds=int(splitted[0]))
         return str(date.date().isoformat())
     elif splitted[1].lower() in ['mins', 'minutes', 'min', "minute"]:
-        date = datetime.datetime.now() - relativedelta(minutes=int(splitted[0]))
+        date = datetime.now() - relativedelta(minutes=int(splitted[0]))
         return str(date.date().isoformat())
     elif splitted[1].lower() in ['hour', 'hours', 'hr', 'hrs', 'h']:
-        date = datetime.datetime.now() - relativedelta(hours=int(splitted[0]))
+        date = datetime.now() - relativedelta(hours=int(splitted[0]))
         return str(date.date().isoformat())
     elif splitted[1].lower() in ['day', 'days', 'd']:
         date = TODAY - relativedelta(days=int(splitted[0]))
@@ -74,7 +77,7 @@ for ind in df.index:
     try:
         article.parse()
         article.nlp()
-        dict['pub_date'] = get_past_date(df['date'][ind])
+        dict['pub_date'] = get_past_date(df['date'][ind]) + " " +time
         dict['source'] = df['media'][ind]
         dict['title'] = article.title
         dict['url'] = article.url

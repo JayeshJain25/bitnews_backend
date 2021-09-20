@@ -5,6 +5,7 @@ import readtime
 from newspaper import Article
 from newspaper import Config
 
+
 user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.58 Safari/537.36'
 config = Config()
 config.browser_user_agent = user_agent
@@ -23,7 +24,7 @@ for item in df.index:
         article.nlp()
         imageList = full_article.top_image
         dict = {'title': df['title'][item], 'description': full_article.text, 'url': df['url'][item],
-                'pub_date': datetime.strptime(df['published date'][item], "%a, %d %b %Y %I:%M:%S %Z").date(),
+                'pub_date': datetime.strptime(df['published date'][item], "%a, %d %b %Y %I:%M:%S %Z"),
                 'source': df['publisher'][item]['title'], 'photo_url': imageList, 'summary': article.summary,
                 'read_time': readtime.of_text(full_article.text)
                 }
